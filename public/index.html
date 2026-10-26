@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="bar">
+        <div class="search-wrap">
+          <input
+            id="search"
+            type="search"
+            placeholder="Search city…"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search city"
+          />
+          <ul id="results" class="results" hidden></ul>
+        </div>
+        <button id="geo" class="btn" title="Use my location" aria-label="Use my location"></button>
+        <button id="unit" class="btn unit" aria-label="Toggle units">°C</button>
+      </header>
+
+      <p id="status" class="status" hidden></p>
+
+      <section id="now" class="card now" hidden></section>
+
+      <section class="card" id="hourly-card" hidden>
+        <h2 class="card-title">Next 24 hours</h2>
+        <div id="hourly" class="hourly"></div>
+      </section>
+
+      <section class="card" id="daily-card" hidden>
+        <h2 class="card-title">7-day forecast</h2>
+        <div id="daily" class="daily"></div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
